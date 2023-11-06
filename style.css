@@ -1,0 +1,297 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Crimson Text', serif;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  height: 50px;
+}
+
+header .navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+header .navbar ul li {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.header .navbar ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #a0b6bb;
+  transition: color 0.3s; /* Transisi warna saat hover */
+  /* Efek hover */
+  &:hover {
+    color: #50696e; /* Warna teks menjadi lebih gelap saat hover */
+  }
+}
+
+body {
+  background: linear-gradient(144deg, #162938 31.01%, #000815 52.72%);
+}
+
+.herosection {
+  width: 100%;
+  height: 740px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('img/gambar/bg.jpg'); /* Alamat gambar latar belakang */
+  background-size: cover; /* Memastikan gambar latar belakang mengisi area sepenuhnya */
+  background-position: center; /* Posisi gambar latar belakang */
+}
+
+.bagian-kiri {
+  align-items: space-evenly;
+  width: 700px;
+  height: 100%;
+  font-size: 25px;
+  color: #163142;
+}
+
+.tulisan {
+  margin-top: 30%;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.button {
+  margin-bottom: 0px;
+  width: 116.16px;
+  height: 53px;
+  border: none;
+  border-radius: 7px;
+  background: #2b4960;
+  color: #a0b6bb;
+  padding: 10px 20px; /* Sesuaikan padding sesuai kebutuhan Anda */
+  margin: 5px; /* Sesuaikan margin sesuai kebutuhan Anda */
+  cursor: pointer;
+  transition: background 0.3s;
+  &:hover {
+    background: #1d3646; /* Warna latar belakang lebih gelap saat hover */
+  }
+  font-size: 20px;
+}
+
+.sosmed {
+  margin-top: 34%;
+}
+
+.sosmed img {
+  margin-right: 20px;
+}
+
+.bagian-kanan {
+  display: flex;
+}
+
+.gambar {
+  width: 450px; /* Lebar wadah gambar */
+  height: 450px; /* Tinggi wadah gambar (sesuaikan dengan lebar untuk membuat lingkaran) */
+  overflow: hidden; /* Menghilangkan bagian yang melebihi wadah */
+  border-radius: 50%; /* Membuat wadah menjadi lingkaran */
+}
+
+.gambar img {
+  width: 100%; /* Mengisi lebar wadah gambar */
+  height: 100%; /* Mengisi tinggi wadah gambar */
+  object-fit: cover; /* Memastikan gambar mengisi area sepenuhnya */
+}
+
+.secondsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0b6bb;
+  height: 100vh; /* Untuk membuat .secondsection mencakup seluruh tinggi layar */
+}
+
+.secondsection .teks {
+  text-align: center; /* Untuk mengatur teks ke tengah horizontal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+
+.thirdsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #a0b6bb;
+  height: 100vh; /* Untuk membuat .thirdsection mencakup seluruh tinggi layar */
+}
+
+.thirdsection h1 {
+  margin-bottom: 50px;
+}
+
+.thirdsection .projects {
+  text-align: center; /* Untuk mengatur teks ke tengah horizontal */
+  display: flex;
+  flex-direction: row; /* Menampilkan gambar dalam baris */
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+
+.projects div {
+  margin: 10px; /* Jarak antara gambar */
+}
+
+.projects div img {
+  margin-right: 30px;
+  width: 600px; /*S Mengatur ukuran gambar sesuai kebutuhan Anda */
+  border-radius: 5%;
+  object-fit: cover;
+  transition: ease-in-out 0.4s;
+}
+
+.gambarprojects {
+  display: flex;
+}
+
+.gambarprojects img:hover {
+  transform: scale(1.1);
+}
+
+.forthsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #a0b6bb;
+  height: 100vh; /* Untuk membuat .thirdsection mencakup seluruh tinggi layar */
+}
+
+.forthsection .courses {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.courses img {
+  margin: 20px;
+  width: auto;
+  height: 70px;
+}
+
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  background: linear-gradient(0deg, #162938 50%, #000815 100%);
+}
+
+.sampulfooter {
+  margin-top: 50px;
+  padding: 30px;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-text ul li {
+  margin-top: 20px;
+}
+
+.pengirimanGmail {
+  padding: 10px;
+  display: flex;
+  width: 298px;
+  border-radius: 5%;
+  background-color: #000815;
+  flex-direction: column;
+}
+
+.pengirimanGmail img {
+  height: 30px;
+}
+
+.tulisanlogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+
+.chat-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #162938; /* Background color for the form */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the form */
+}
+
+label {
+  font-weight: bold;
+  color: #fff; /* Color for labels */
+}
+
+input[type='text'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc; /* Border for text input and textarea */
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type='submit'] {
+  background-color: #007bff; /* Background color for the Send button */
+  color: #fff; /* Text color for the Send button */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  background: #2b4960;
+  color: #a0b6bb;
+  padding: 10px 20px; /* Sesuaikan padding sesuai kebutuhan Anda */
+  margin: 5px; /* Sesuaikan margin sesuai kebutuhan Anda */
+  cursor: pointer;
+  transition: background 0.3s;
+  &:hover {
+    background: #1d3646; /* Warna latar belakang lebih gelap saat hover */
+  }
+}
+
+//handphone
+
+@media screen and (max-width: 576px) {
+  header .navbar ul li {
+    display: none;
+  }
+}
