@@ -2,67 +2,135 @@ html {
   scroll-behavior: smooth;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Crimson Text', serif;
-  font-style: normal;
+body {
+  background: linear-gradient(144deg, #162938 31.01%, #000815 52.72%);
 }
 
-ul {
-  list-style: none;
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border-radius: 0, 50px;
+  backdrop-filter: blur(10px);
+  transition: top 0.6s ease; /* Efek transisi */
 }
 
-.header {
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  position: relative;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
   position: absolute;
+  height: 3px;
   width: 100%;
+  background: white;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
 }
 
-.header div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 75%;
-  height: 50px;
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+  position: absolute;
+  top: 0px;
+  transform: rotate(0deg);
 }
 
-header .navbar ul {
-  display: flex;
-  list-style: none;
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  filter: alpha(opacity=100);
 }
 
-header .navbar ul li {
-  padding: 5px;
-  margin-right: 10px;
+.navbar-toggler.collapsed .bottom-bar {
+  position: absolute;
+  top: 20px;
+  transform: rotate(0deg);
 }
 
-.header .navbar ul li a {
-  text-decoration: none;
-  cursor: pointer;
-  color: #a0b6bb;
-  transition: color 0.3s; /* Transisi warna saat hover */
-  /* Efek hover */
-  &:hover {
-    color: #50696e; /* Warna teks menjadi lebih gelap saat hover */
-  }
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+  top: inherit;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  top: inherit;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  top: inherit;
+  transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+  background: #4d5e6b;
+}
+
+.toggler-icon {
+  background: #4d5e6b;
+}
+
+.nav-link {
+  color: white;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  opacity: 0;
+  transition: all 0.2s;
+  height: 2px;
+  width: 100%;
+  background-color: #162938;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
 }
 
 @media (max-width: 480px) {
-  header .navbar ul li {
-    display: none;
+  .navbar {
+    margin: 10px;
   }
 
-  header svg {
-    width: 45px; /* Set the desired width */
-    height: 45px;
+  .navbar-nav {
+    margin: 10px;
   }
-}
 
-body {
-  background: linear-gradient(144deg, #162938 31.01%, #000815 52.72%);
+  .nav-link::after {
+    width: 20%;
+  }
 }
 
 .herosection {
@@ -108,7 +176,7 @@ body {
 
 .button {
   margin-bottom: 0px;
-  width: 116.16px;
+  width: 118px;
   height: 53px;
   border: none;
   border-radius: 7px;
@@ -168,8 +236,8 @@ body {
 
   .button {
     margin-bottom: 160px;
-    width: 110px;
-    height: 53px;
+    width: 130px;
+    height: 55px;
     border: none;
     border-radius: 7px;
     background: #2b4960;
