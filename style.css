@@ -9,9 +9,12 @@ body {
 .navbar {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
-  border-radius: 0, 50px;
   backdrop-filter: blur(10px);
   transition: top 0.6s ease; /* Efek transisi */
+  width: 75%;
+  margin-top: 10px;
+  margin-right: 30px;
+  border-radius: 50px;
 }
 
 .navbar-toggler {
@@ -99,7 +102,6 @@ body {
 }
 
 .nav-link {
-  color: white;
   position: relative;
 }
 
@@ -122,6 +124,13 @@ body {
 @media (max-width: 480px) {
   .navbar {
     margin: 10px;
+    margin-top: 0;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .nav-link::after {
+    display: none;
   }
 
   .navbar-nav {
@@ -135,7 +144,7 @@ body {
 
 .herosection {
   width: 100%;
-  height: 740px;
+  height: 940px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -313,6 +322,13 @@ body {
   width: 75%;
 }
 
+@media (max-width: 480px) {
+  .secondsection {
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+}
+
 .thirdsection {
   display: flex;
   align-items: center;
@@ -347,12 +363,21 @@ body {
   transition: ease-in-out 0.4s;
 }
 
-.gambarprojects {
+.carouselExampleCaptions {
   display: flex;
 }
 
-.gambarprojects img:hover {
-  transform: scale(1.1);
+.carousel-item img {
+  filter: brightness(30%);
+  height: auto; /* Sesuaikan dengan kebutuhan */
+  width: 100%; /* Untuk menjaga aspek rasio */
+  display: block; /* Untuk memastikan gambar ditempatkan dengan benar */
+  margin: 0 auto; /* Untuk posisi tengah */
+}
+
+.carousel-item img:hover {
+  filter: none; /* Mengurangi kecerahan menjadi 30% */
+  transition: filter 0.3s ease; /* Efek transisi */
 }
 
 @media (max-width: 480px) {
@@ -528,7 +553,7 @@ input[type='submit'] {
 @media (max-width: 480px) {
   footer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-center;
     flex-direction: column;
     align-items: center;
     color: #fff;
@@ -536,8 +561,8 @@ input[type='submit'] {
   }
 
   .sampulfooter {
-    justify-content: flex-start;
-    flex-direction: column;
+    justify-content: flex-center;
+    flex-direction: wrap;
     width: 70%;
     display: flex;
     align-items: center;
@@ -545,6 +570,7 @@ input[type='submit'] {
 
   .footer-text ul {
     margin-bottom: 50px;
+    margin: 10px;
   }
 
   .footer-text ul li {
@@ -561,55 +587,6 @@ input[type='submit'] {
   }
 
   .pengirimanGmail img {
-    height: 30px;
-  }
-
-  .tulisanlogo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-  }
-
-  .chat-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-    background-color: #162938; /* Background color for the form */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the form */
-  }
-
-  label {
-    font-weight: bold;
-    color: #fff; /* Color for labels */
-  }
-
-  input[type='text'],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc; /* Border for text input and textarea */
-    border-radius: 5px;
-    outline: none;
-  }
-
-  input[type='submit'] {
-    background-color: #007bff; /* Background color for the Send button */
-    color: #fff; /* Text color for the Send button */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 7px;
-    background: #2b4960;
-    color: #a0b6bb;
-    padding: 10px 20px; /* Sesuaikan padding sesuai kebutuhan Anda */
-    margin: 5px; /* Sesuaikan margin sesuai kebutuhan Anda */
-    cursor: pointer;
-    transition: background 0.3s;
-    &:hover {
-      background: #1d3646; /* Warna latar belakang lebih gelap saat hover */
-    }
+    display: hidden;
   }
 }
